@@ -15,10 +15,8 @@ public class TrainInputReaderImpl implements TrainInputReader {
 		try (Scanner scanner = new Scanner(new File(filePath));) {
 			while (scanner.hasNextLine()) {
 				data[i] = scanner.nextLine();
-				System.out.println(data[i]);
 				i++;
 			}
-			System.out.println();
 			return data;
 		} catch (FileNotFoundException e) {
 			System.out.println("An error occurred while reading data from file.");
